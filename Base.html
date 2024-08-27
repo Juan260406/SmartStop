@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoción de Producto</title>
+    <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+    <header>
+    	<img src="logo.png" alt="Logo" class="imagen-logo">
+        <h1>SMART STOP - Parada de transporte inteligente e inclusiva</h1>
+    </header>
+    
+    <div class="parrafo">
+    	<p>	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSmart Stop es un producto que consta de una parada de transporte distinta a la convencional al disponer de un sistema de componentes que permiten dar aviso de distintas maneras sobre la aproximación de colectivos a dicha parada. Esto es fundamental, ya que cumple con uno de los principales objetivos del producto: La inclusión y facilitación para usuarios del transporte público no videntes.<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEl producto ayuda a las personas con discapacidad visual, y a cualquier usuario del transporte público, a manejarse con mayor libertad y autonomía al utilizarlo, sin depender de la ayuda de terceros para identificar los autobuses correctos, así como de brindarles mayor accesibilidad.</p>
+    </div>
+    
+    <section class="producto">
+        <img src="parada.jpeg" alt="Producto" class="imagen-producto">
+        <div class="descripcion">
+            <h2>Smart Stop</h2>
+            <p>Parada de transporte inteligente e inclusiva.<br> <b>Precio:</b> $1.300.000</p>
+            <button class="boton-comprar" onclick="mostrarAviso()">Comprar ahora</button>
+            <button class="boton-carrito" onclick="anadirAlCarrito('Smart Stop', 1300000); avisoAnadido();">Añadir al carrito</button>
+        </div>
+    </section>
+    
+    <section class="producto">
+        <img src="parada.jpeg" alt="Producto" class="imagen-producto">
+        <div class="descripcion">
+            <h2>Smart Stop - 4 unidades</h2>
+            <p>Parada de transporte inteligente e inclusiva.<br> Promo: 4 unidades.<br> <b>Precio:</b> $5.000.000</p>
+            <button class="boton-comprar" onclick="mostrarAviso()">Comprar ahora</button>
+            <button class="boton-carrito" onclick="anadirAlCarrito('Smart Stop &#40;4 unidades&#41;', 5000000); avisoAnadido();">Añadir al carrito</button>            
+        </div>
+    </section>    
+    
+    <section class="producto">
+        <img src="parada.jpeg" alt="Producto" class="imagen-producto">
+        <div class="descripcion">
+            <h2>Smart Stop - 8 unidades</h2>
+            <p>Parada de transporte inteligente e inclusiva.<br> Promo: 8 unidades.<br> <b>Precio:</b> $9.500.000</p>
+            <button class="boton-comprar" onclick="mostrarAviso()">Comprar ahora</button>
+            <button class="boton-carrito" onclick="anadirAlCarrito('Smart Stop &#40;8 unidades&#41;', 9500000); avisoAnadido();">Añadir al carrito</button>            
+        </div>
+    </section>
+    
+    <section class="producto">
+        <img src="parada.jpeg" alt="Producto" class="imagen-producto">
+        <div class="descripcion">
+            <h2>Smart Stop - 12 unidades</h2>
+            <p>Parada de transporte inteligente e inclusiva.<br> Promo: 12 unidades.<br> <b>Precio:</b> $14.000.000</p>
+            <button class="boton-comprar" onclick="mostrarAviso()">Comprar ahora</button>
+            <button class="boton-carrito" onclick="anadirAlCarrito('Smart Stop &#40;12 unidades&#41;', 14000000); avisoAnadido();">Añadir al carrito</button>            
+        </div>
+    </section>
+    
+    <div id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="lista-productos"></ul>
+        <p id="total">Total: $0.00</p>
+    <button class="boton-eliminar" onclick="eliminarCarrito()">Eliminar carrito</button>      
+    </div>    
+    
+    
+
+    <footer>
+        <p id="foot">© 2024 SmartStop. Todos los derechos reservados. Contáctenos: smartstop@gmail.com ó al +54 351 808-7710.<br>Página web realizada por Juan Ignacio Petrei.</p>
+    </footer>
+    
+    <script>
+        function mostrarAviso() {
+            alert("¡El producto ha sido comprado con éxito!");
+        }
+        
+	function avisoAnadido() {
+	    alert("¡Añadido con éxito!");
+	}           
+        
+        
+        let carrito = {};
+
+        function anadirAlCarrito(producto, precio) {
+            if (carrito[producto]) {
+                carrito[producto].cantidad++;
+                carrito[producto].precioTotal += precio;
+            } else {
+                carrito[producto] = {
+                    cantidad: 1,
+                    precioTotal: precio
+                };
+            }
+            actualizarCarrito();
+        }
+
+        function actualizarCarrito() {
+            const listaProductos = document.getElementById('lista-productos');
+            const total = document.getElementById('total');
+            let totalPrecio = 0;
+
+            listaProductos.innerHTML = '';
+
+            for (let producto in carrito) {
+                const item = carrito[producto];
+                totalPrecio += item.precioTotal;
+                listaProductos.innerHTML += `<li>${producto} - Cantidad: ${item.cantidad} - Precio Total: $${item.precioTotal.toFixed(2)}</li>`;
+            }
+
+            total.innerHTML = `Total: $${totalPrecio.toFixed(2)}`;
+        }
+        
+        function eliminarCarrito() {
+            carrito = {};
+            actualizarCarrito();
+        }        
+             
+        
+        
+        
+    </script>
+        
+    
+    
+    
+</body>
+</html>
+

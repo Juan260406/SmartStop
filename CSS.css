@@ -1,0 +1,160 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #9C9FBE;
+    color: #333;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #000F89;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.imagen-logo {
+    max-width: 100px;
+    margin-right: 7px;
+    border-radius: 4px;
+}
+
+/* Estilos de la sección del producto */
+.parrafo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.producto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.imagen-producto {
+    max-width: 300px;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.descripcion {
+    max-width: 600px;
+}
+
+.descripcion h1 {
+    color: #C7E0D9;
+}
+
+.descripcion h2 {
+    color: #000F89;
+    margin-bottom: 10px;
+}
+
+.descripcion p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Estilos del botón */
+.boton-comprar {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.boton-comprar:hover {
+    background-color: #218838;
+}
+
+.boton-carrito {
+    background-color: #A1A6BB;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.boton-carrito:hover {
+    background-color: #888C9E;
+}
+
+/* Estilos del pie de página */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #000F89;
+    color: #fff;
+    margin-top: 20px;
+}
+
+
+
+
+
+        .boton-eliminar {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .boton-eliminar:hover {
+            background-color: #c82333;
+        }
+
+        #carrito {
+            margin-top: 40px;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+
+        #carrito h2 {
+            margin-bottom: 20px;
+        }
+
+        #carrito ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #carrito ul li {
+            margin-bottom: 10px;
+        }
+
+        #total {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+
+
+
+
+
